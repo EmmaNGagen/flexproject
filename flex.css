@@ -1,31 +1,65 @@
-html, 
-body{
-    height: 100%;
+html,
+body {
+  height: 100%;
+  font-family: monospace;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-
+  background-color: cornsilk;
 }
 
-header{
-    height: 80px;
-    background-color: beige;
+header {
+  height: 75px;
+  border: 4px solid rgb(205, 136, 17);
+  justify-content: space-around;
+  margin-bottom: 2%;
 }
 
 main {
-    background-color: gainsboro;
-    border: 1px solid;
-    flex-grow: 1;
-  
-    display: flex;
-    flex-direction: column;
-
-
+  height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  padding: 1%;
+  gap: 15px;
 }
- div {
-    flex-grow: 3;
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 3;
+  gap: 20px;
+}
+
+.flex-container > section {
+  display: flex;
+  border: 3px solid rgb(55, 31, 10);
+  border-radius: 1%;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .flex-container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1256px) {
+  .flex-container > section:first-child,
+  .flex-container > section:last-child {
+    flex-direction: row;
+  }
+}
+
+h6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
